@@ -7,10 +7,10 @@ const Chatbox = () => {
 	useEffect(() => {
 		const socket = io("http://localhost:5000");
 		socket.on("connect", () => {
-			console.log("CONNECTED");
+			console.log("Socket connected");
 		});
 		socket.on("message", data => {
-			console.log("MESSAGE FROM SOCKET: " + message);
+			console.log("Message from Socket: " + message);
 			setMessage(data);
 		});
 	});
