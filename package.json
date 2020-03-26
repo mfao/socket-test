@@ -1,0 +1,25 @@
+{
+  "name": "chatapp",
+  "version": "1.0.0",
+  "description": "Testapp for socket connections",
+  "main": "server.js",
+  "scripts": {
+    "start": "NODE_ENV=production node server",
+    "client": "npm start --prefix client",
+    "clientinstall": "npm install --prefix client",
+    "dev": "concurrently \"nodemon server\" \"npm run client\""
+  },
+  "author": "Markus Folz",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^5.1.0",
+    "create-react-app": "^3.4.1",
+    "express": "^4.17.1",
+    "http-proxy-middleware": "^1.0.3",
+    "moment": "^2.24.0",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
